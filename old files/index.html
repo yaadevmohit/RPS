@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="battlefield">
+            <h1 class="battlefield title">HUMAN VS TECHNOLOGY</h1>
+            <div class="ai-options">
+                <h4>Choose an option and I'll be ready</h4>
+                <button><img src="img/ai-rock.jpeg" class="ai-option" alt="ROCK"></button>
+                <button><img src="img/ai-paper.jpeg" class="ai-option" alt="PAPER"></button>
+                <button><img src="img/ai-scissors.jpeg" class="ai-option" alt="SCISSORS"></button>
+            </div>
+            <div class="players">
+               <img src="img/AI.png" alt="">
+                <div class="moves">
+                <img src="" class="move" id="move-1" alt="">
+                <img src="" class="move" id="move-2" alt="">
+                </div>
+                <img src="img/human.png" alt="">
+            </div>
+            <div class="human-options">
+                <h4>Click an option to begin the round</h4>
+                <button><img src="img/human-rock.jpeg" class="human-option" alt="ROCK"></button>
+                <button><img src="img/human-paper.jpeg" class="human-option" alt="PAPER"></button>
+                <button><img src="img/human-scissors.jpeg" class="human-option" alt="SCISSORS"></button>
+            </div>
+        </div>
+        <div class="counter">
+            <h3 class="counter-part">Rounds won: <span id="ai-rounds"></span></h3>
+            <h3 class="counter-part">Rounds remaining: <span id="rounds-remaining"></span></h3>
+            <h3 class="counter-part">Rounds won: <span id="player-rounds"></span></h3>
+            <h3 class="counter-part">Leading: <span id="leading"></span></h3>
+            
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

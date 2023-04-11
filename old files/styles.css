@@ -1,0 +1,60 @@
+body {
+    background-color: #5b7994;
+    }
+
+.battlefield, .ai-options, .human-options, .players, .counter {
+    display: flex;
+}
+.human-options, .ai-options {
+    flex-direction: column;
+    border: 2px dotted red;
+    justify-content: flex-start;
+} 
+
+.battlefield {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.battlefield.title {
+    width: 100%;
+    justify-content: center;
+}
+
+.ai-option, #move-1 {
+    transform: rotate(90deg);
+}
+.ai-option {
+    width: auto;
+    height: 100px;
+}
+
+.moves {
+    align-items: center;
+}
+
+.move {
+    width: 80px;
+    height: auto;
+    }
+.players {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.human-option {
+    width: 120px;
+    height: auto;
+    
+}
+
+.counter {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 20%;
+}
+
+.counter-part {
+    flex: 0 0 33.333333%;
+
+}
+

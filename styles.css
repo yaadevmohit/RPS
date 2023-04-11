@@ -1,55 +1,70 @@
 body {
-    background-color: #5b7994;
-    }
+	background-color: #5b7994;
+}
 
 .battlefield {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .battlefield.title {
-    width: 100%;
-    justify-content: center;
+	width: 100%;
+	justify-content: center;
 }
 
+img {
+	border-radius: 10px;
+}
+.rounding {
+	border-radius: 10px;
+}
 .ai-options {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .ai-option {
-    width: 80px;
-    height: 100px;
-    transform: rotate(90deg);
+	width: 60px;
+	height: 75px;
+	transform: rotate(90deg);
+}
+.player {
+	padding: 1rem;
+	margin: 1rem;
+	display: flex;
 }
 .players {
-    display: flex;
-    align-items: baseline;
+	display: flex;
 }
 .moves {
-    align-items: center;
+	align-items: center;
 }
 
 #move-1 {
-    transform: rotate(90deg);
-    margin-left: 0;
+	transform: rotate(90deg);
+	margin-left: 0;
 }
 .move {
-    width: 80px;
-    height: 100px;
-    align-self: center;
-} 
-
+	width: 80px;
+	height: 100px;
+	align-self: center;
+}
+.hand-placement {
+	align-self: flex-end;
+	margin: 0rem 0rem 3.5rem 0.25rem;
+}
+.ai-rotate {
+	height: 65px;
+	width: 75px;
+	transform: rotate(90deg);
+}
 .human-options {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
 
 .human-option {
-    width: 80px;
-    height: 100px;
+	width: 80px;
+	height: 100px;
 }
-
-

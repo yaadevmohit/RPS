@@ -44,12 +44,14 @@ humanHand.src = "img/human-scissors.jpeg"
 //         console.log(`player chose: ${playerSelection} computer chose: ${computerSelection}`)
 //         playerRounds+=1
 //         console.log(`Player: ${playerRounds} Computer: ${computerRounds}`)
+//         console.log("This round goes to MY NIGGA")
 //     }
 // };
 
 // // Checking who won 5 rounds
 // if (playerRounds === 5 ) {
 //     alert("Player won")
+//     console.log("my nigga won!!!!!!")
 // }
 // else if (computerRounds === 5) {
 //     alert("Computer won")
