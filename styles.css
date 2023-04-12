@@ -76,14 +76,21 @@ img {
 }
 
 .result {
-	margin: 0 25rem;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
+	margin-left: 20rem;
 }
 
-.result > h2 {
+.result > h3 {
 	flex: 0 0 50%;
+}
+#final-result {
+	justify-content: center;
+}
+#restart-button {
+	display: block;
+	margin: auto;
 }
 
 

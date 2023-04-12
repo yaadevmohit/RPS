@@ -37,25 +37,33 @@ humanButtons.forEach((button) => {
         aiHand.src = `img/ai-${computerInput}.png`
         if (resultsDictionary[button.id][computerInput] === "player") {
             playerRounds.textContent = parseInt(playerRounds.textContent) +1
-            result.textContent = "One more round"
+            result.textContent = "Robot: One more round pls"
         }
         if (resultsDictionary[button.id][computerInput] === "computer") {
             computerRounds.textContent = parseInt(computerRounds.textContent) + 1
-            result.textContent = "HAHAHAHAHAAHAHAHAHA"
+            result.textContent = "Robot: HAHAHAHAHAAHAHAHAHa one more?"
         }
         if (computerRounds.textContent === "5") {
             for(let i = 0; i < humanButtons.length; i++) {
                 humanButtons[i].disabled = true;
             }
-            result.textContent = "LOSER! Got beaten by a computer!!"
-            title.textContent = "Refresh to play again"
+            result.textContent = "Robot: LOSER! Got beaten by a computer!!"
+            const restart = document.createElement("button")
+            restart.setAttribute('id', 'restart-button')
+            restart.textContent = "Reset Game"
+            restart.addEventListener('click', () => window.location.reload())
+            document.body.append(restart)
         }
         if (playerRounds.textContent === "5") {
             for(let i = 0; i < humanButtons.length; i++) {
                 humanButtons[i].disabled = true;
             }            
-            result.textContent = "YOU WON LUCKY BASTARD!!!"
-            title.textContent = "Refresh to play again"
+            result.textContent = "Robot: YOU WON LUCKY BASTARD!!!"
+            const restart = document.createElement("button")
+            restart.setAttribute('id', 'restart-button')
+            restart.textContent = "Reset Game"
+            restart.addEventListener('click', () => window.location.reload())
+            document.body.append(restart)
         } 
 
     })
