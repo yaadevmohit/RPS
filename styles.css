@@ -1,10 +1,12 @@
 body {
 	background-color: #5b7994;
 }
+.battlefield, .ai-options, .players, .human-options, .result {
+	display: flex;
+} 
 
 .battlefield {
-	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 .battlefield.title {
@@ -19,7 +21,6 @@ img {
 	border-radius: 10px;
 }
 .ai-options {
-	display: flex;
 	flex-direction: column;
 }
 
@@ -33,17 +34,20 @@ img {
 	margin: 1rem;
 	display: flex;
 }
-.players {
-	display: flex;
-}
 .moves {
 	align-items: center;
 }
 
 #move-1 {
-	transform: rotate(90deg);
+	transform: rotate(80deg);
 	margin-left: 0;
+	margin: 0rem 0rem 9rem 0.15rem;
 }
+#move-2 {
+	transform: rotate(-5deg);
+	
+}
+
 .move {
 	width: 80px;
 	height: 100px;
@@ -51,20 +55,36 @@ img {
 }
 .hand-placement {
 	align-self: flex-end;
-	margin: 0rem 0rem 3.5rem 0.25rem;
+	margin: 0rem 0rem 3.5rem 0.15rem;
 }
 .ai-rotate {
 	height: 65px;
 	width: 75px;
-	transform: rotate(90deg);
 }
 .human-options {
-	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 }
 
 .human-option {
 	width: 80px;
-	height: 100px;
+	height: auto;
+	background-color:#5b7994;
 }
+.human-button {
+	background-color: #5b7994;
+}
+
+.result {
+	margin: 0 25rem;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.result > h2 {
+	flex: 0 0 50%;
+}
+
+
+

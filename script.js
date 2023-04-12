@@ -1,59 +1,63 @@
 // declaring global variables
-const playerRounds = document.querySelector("#player-rounds");
-const computerRounds = document.querySelector("#ai-rounds");
+const computerRounds = document.querySelector("#computer-count");
+const playerRounds = document.querySelector("#player-count");
 const aiHand = document.querySelector("#move-1")
 const humanHand = document.querySelector("#move-2")
-playerRounds.textContent = "1"
-aiHand.src = "img/ai-rock.jpeg"
-humanHand.src = "img/human-scissors.jpeg"
+const humanButtons = document.querySelectorAll('.human-button');
+const result = document.querySelector('#final-result');
+const title = document.querySelector(".battlefield.title")
+const resultsDictionary = {
+    'rock': {
+        'rock': 'tie',
+        'paper': 'computer',
+        'scissors': 'player'
+    },
+    'paper': {
+        'rock': 'player',
+        'paper': 'tie',
+        'scissors': 'computer'
+    },
+    'scissors': {
+        'rock': 'computer',
+        'paper': 'player',
+        'scissors': 'tie'
+}
+}
+function getAIChoice() {
+    let choices = Object.keys(resultsDictionary)
+    let AIChoice = choices[Math.floor(Math.random() * choices.length)]
+    return AIChoice
+}
 
-// looping until someone wins 5 rounds
-// while (playerRounds < 5 && computerRounds < 5) {
-//     // getting choices from both sides
 
-//     function getComputerChoice() {
-//     let computerChoice = choices[Math.floor(Math.random()*choices.length)]
-//     return computerChoice
-//     };
+humanButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        humanHand.src = `img/human-${button.id}.png`
+        computerInput = getAIChoice()
+        aiHand.src = `img/ai-${computerInput}.png`
+        if (resultsDictionary[button.id][computerInput] === "player") {
+            playerRounds.textContent = parseInt(playerRounds.textContent) +1
+            result.textContent = "One more round"
+        }
+        if (resultsDictionary[button.id][computerInput] === "computer") {
+            computerRounds.textContent = parseInt(computerRounds.textContent) + 1
+            result.textContent = "HAHAHAHAHAAHAHAHAHA"
+        }
+        if (computerRounds.textContent === "5") {
+            for(let i = 0; i < humanButtons.length; i++) {
+                humanButtons[i].disabled = true;
+            }
+            result.textContent = "LOSER! Got beaten by a computer!!"
+            title.textContent = "Refresh to play again"
+        }
+        if (playerRounds.textContent === "5") {
+            for(let i = 0; i < humanButtons.length; i++) {
+                humanButtons[i].disabled = true;
+            }            
+            result.textContent = "YOU WON LUCKY BASTARD!!!"
+            title.textContent = "Refresh to play again"
+        } 
 
-//     computerSelection = getComputerChoice();
-//     // comparing choices and deciding the round winner
-//     if (computerSelection === playerSelection) {
-//         console.log(`player chose: ${playerSelection} computer chose: ${computerSelection}`)
-//         console.log("It's a tie!!")
-//     }
-//     else if (computerSelection === "ROCK" && playerSelection === "SCISSORS") {
-//         computerRounds+=1
-//         console.log(`player chose: ${playerSelection} computer chose: ${computerSelection}`)
-//         console.log("This round goes to computer")
-//         console.log(`Player: ${playerRounds} Computer: ${computerRounds}`)
-//     }
-//     else if (computerSelection === "PAPER" && playerSelection === "ROCK") {
-//         computerRounds+=1
-//         console.log(`player chose: ${playerSelection} computer chose: ${computerSelection}`)
-//         console.log("This round goes to computer")
-//         console.log(`Player: ${playerRounds} Computer: ${computerRounds}`)
-//     }    
-//     else if (computerSelection === "SCISSORS" && playerSelection === "PAPER") {
-//         computerRounds+=1
-//         console.log(`player chose: ${playerSelection} computer chose: ${computerSelection}`)
-//         console.log("This round goes to computer")
-//         console.log(`Player: ${playerRounds} Computer: ${computerRounds}`)
-//     }
-//     else {
-//         console.log(`player chose: ${playerSelection} computer chose: ${computerSelection}`)
-//         playerRounds+=1
-//         console.log(`Player: ${playerRounds} Computer: ${computerRounds}`)
-//     }
-// };
-
-// // Checking who won 5 rounds
-// if (playerRounds === 5 ) {
-//     alert("Player won")
-// }
-// else if (computerRounds === 5) {
-//     alert("Computer won")
-//     console.log("technology took over")
-// }
-
+    })
+})
 

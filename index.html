@@ -12,30 +12,36 @@
         <div class="battlefield">
             <h1 class="battlefield title">HUMAN VS TECHNOLOGY</h1>
             <div class="ai-options">
-                <img src="img/ai-rock.jpeg" class="ai-option" alt="">
-                <img src="img/ai-paper.jpeg" class="ai-option" alt="">
-                <img src="img/ai-scissors.jpeg" class="ai-option" alt="">
+                <img src="img/ai-rock.png" class="ai-option" alt="">
+                <img src="img/ai-paper.png" class="ai-option" alt="">
+                <img src="img/ai-scissors.png" class="ai-option" alt="">
             </div>         
             <div class="players">
                 <div class="player">
                     <img src="img/AI.png" width="250px" height="250px" alt="">
                     <div class="ai-rotate hand-placement">
-                        <img src="img/ai-paper.jpeg" width="60px" height="75px"  alt="">
+                        <img src="img/ai-rock.png" id="move-1" width="60px" height="75px"  alt="">
                     </div>        
                 </div>
                 <div class="player">  
                     <div class="hand-placement">               
-                        <img src="img/human-paper.jpeg" width="60px" height="75px" alt="">
+                        <img src="img/human-mf.png" id="move-2" width="48px" height="60px" alt="">
                     </div>
                     <img src="img/human.png" width="250px" height="250px" alt="">
                 </div>
             </div>
             <div class="human-options">
-                <button><img src="img/human-rock.jpeg" class="human-option" alt=""></button>
-                <button><img src="img/human-paper.jpeg" class="human-option" alt=""></button>
-                <button><img src="img/human-scissors.jpeg" class="human-option" alt=""></button>
+                <button class="human-button" id="rock"><img src="img/human-rock.png" class="human-option" alt=""></button>
+                <button class="human-button" id="paper"><img src="img/human-paper.png" class="human-option" alt=""></button>
+                <button class="human-button" id="scissors"><img src="img/human-scissors.png" class="human-option" alt=""></button>
             </div>
         </div>
         </div>
+        <div class="result">
+            <h2>Computer Count: <span id="computer-count">0</span></h2>
+            <h2>Player Count: <span id="player-count">0</span></h2>
+            <h2 id="final-result"></h2>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>
